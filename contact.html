@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Inquiries | One Voice Event Planners | Kegalle, Sri Lanka</title>
+  <meta name="description" content="Get in touch with Lochana (076 181 3183) and Anusara (072 425 8328) at One Voice Event Planners, Kegalle. Email: onevoiceeventplanners@gmail.com. Book your event date today.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Luxury Dark Theme CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#0D0F12',
+            brandCard: '#13171F',
+            gold: {
+              DEFAULT: '#D4AF37',
+              light: '#F5DE88',
+              dark: '#9E7C1B'
+            },
+            cyanElectric: '#00E5FF',
+            purpleNeon: '#A855F7'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0D0F12] text-slate-100 selection:bg-[#D4AF37]/30 selection:text-[#F5DE88]">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-[#191d26] via-[#1f2636] to-[#191d26] border-b border-[#D4AF37]/20 py-2 px-4 text-xs">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] border border-[#D4AF37]/30 font-medium">
+          <i class="fa-solid fa-map-pin text-[10px]"></i> Kegalle & Islandwide
+        </span>
+        <span class="text-slate-300 hidden sm:inline italic">"Unifying Moments, Celebrating Life"</span>
+      </div>
+      <div class="flex items-center gap-5 text-slate-300">
+        <a href="tel:0761813183" class="hover:text-[#D4AF37] transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-phone text-[#D4AF37]"></i> <span class="hidden md:inline">Lochana:</span> 076 181 3183
+        </a>
+        <a href="tel:0724258328" class="hover:text-[#00E5FF] transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-phone text-[#00E5FF]"></i> <span class="hidden md:inline">Anusara:</span> 072 425 8328
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header id="mainNavbar" class="sticky top-0 z-50 transition-all duration-300 bg-[#0D0F12]/85 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group py-1">
+          <img src="assets/images/logo.svg" alt="One Voice Logo" class="h-11 sm:h-13 w-auto object-contain rounded-lg border border-white/10 p-0.5 bg-black/80 shadow-[0_0_15px_rgba(212,175,55,0.2)] group-hover:border-[#D4AF37]/60 transition-all">
+          <div>
+            <span class="font-cinzel text-xl sm:text-2xl font-black tracking-wider text-white flex items-center gap-1">
+              ONE <span class="text-gold-gradient">VOICE</span>
+            </span>
+            <span class="block text-[10px] uppercase tracking-[0.25em] text-slate-400 font-medium">Event Planners &bull; Kegalle</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="index.html" class="text-slate-300 hover:text-white transition-colors">Home</a>
+          <a href="about.html" class="text-slate-300 hover:text-white transition-colors">About Us</a>
+          <a href="services.html" class="text-slate-300 hover:text-white transition-colors">Services</a>
+          <a href="estimator.html" class="text-slate-300 hover:text-[#00E5FF] transition-colors flex items-center gap-1.5">
+            <i class="fa-solid fa-calculator text-xs text-[#00E5FF]"></i> Package Estimator
+          </a>
+          <a href="gallery.html" class="text-slate-300 hover:text-white transition-colors">Gallery</a>
+          <a href="contact.html" class="text-[#D4AF37] border-b-2 border-[#D4AF37] pb-1 transition-colors">Contact</a>
+        </nav>
+
+        <!-- Header CTA -->
+        <div class="hidden lg:flex items-center gap-3">
+          <a href="https://wa.me/94724258328" target="_blank" rel="noopener noreferrer" class="btn-gold px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-bold inline-flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp text-sm"></i>
+            <span>WhatsApp Anusara</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" type="button" class="md:hidden p-2.5 rounded-xl bg-white/5 border border-white/10 text-slate-200 hover:text-[#D4AF37]">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden md:hidden fixed inset-0 z-50 bg-[#0D0F12]/95 backdrop-blur-xl border-b border-white/10 p-6 flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-white/10">
+          <div class="flex items-center gap-3">
+            <img src="assets/images/logo.svg" alt="One Voice Logo" class="h-10 w-auto object-contain rounded-lg border border-white/10 p-0.5 bg-black">
+            <div>
+              <span class="font-cinzel text-base font-bold text-white">ONE VOICE</span>
+              <span class="block text-[10px] text-slate-400">Event Planners &bull; Kegalle</span>
+            </div>
+          </div>
+          <button id="closeMobileMenu" class="p-2 text-slate-400 hover:text-white text-xl">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <nav class="flex flex-col gap-4 mt-8 text-lg font-medium">
+          <a href="index.html" class="text-slate-200 hover:text-white py-2 border-b border-white/5">Home</a>
+          <a href="about.html" class="text-slate-200 hover:text-white py-2 border-b border-white/5">About Us</a>
+          <a href="services.html" class="text-slate-200 hover:text-white py-2 border-b border-white/5">Services & Packages</a>
+          <a href="estimator.html" class="text-[#00E5FF] py-2 border-b border-white/5">Package Estimator</a>
+          <a href="gallery.html" class="text-slate-200 hover:text-white py-2 border-b border-white/5">Portfolio Gallery</a>
+          <a href="contact.html" class="text-[#D4AF37] py-2">Contact & Inquiries</a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-white/10 space-y-3">
+        <a href="https://wa.me/94724258328" target="_blank" class="w-full py-3 rounded-xl bg-emerald-600 text-white font-semibold text-center flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-lg"></i> Chat on WhatsApp (Anusara: 072 425 8328)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="py-20 relative bg-gradient-to-b from-[#151923] via-[#0D0F12] to-[#0D0F12] border-b border-white/5">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] border border-[#D4AF37]/30 text-xs font-semibold uppercase tracking-widest mb-4">
+        Direct Communications
+      </span>
+      <h1 class="font-cinzel text-4xl sm:text-6xl font-extrabold text-white mb-6">
+        Let’s Create Something <span class="text-gold-gradient">Extraordinary</span>
+      </h1>
+      <p class="max-w-2xl mx-auto text-sm sm:text-base text-slate-300 leading-relaxed font-light">
+        Reach out directly to co-founders Lochana and Anusara for date availability, formal quotations, venue site inspections, or customized package inquiries.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT GRID & FORM -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left: Contact Details & Founder Cards -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <h2 class="font-cinzel text-2xl font-bold text-white">Direct Hotlines</h2>
+          <p class="text-xs text-slate-400">Connect with our leadership team immediately:</p>
+
+          <!-- Lochana Card -->
+          <div class="glass-panel p-6 rounded-3xl border border-[#D4AF37]/30 bg-[#131720]">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-14 h-14 rounded-2xl bg-[#D4AF37]/20 border border-[#D4AF37]/40 flex items-center justify-center text-[#D4AF37] text-2xl font-black">
+                <i class="fa-solid fa-headset"></i>
+              </div>
+              <div>
+                <span class="text-[10px] uppercase font-bold text-[#D4AF37] tracking-wider">Co-Founder &amp; Production Head</span>
+                <h3 class="text-xl font-bold text-white">Lochana</h3>
+                <span class="text-xs text-slate-400">Audio Engineering &amp; Operations</span>
+              </div>
+            </div>
+            <div class="space-y-2 pt-2 border-t border-white/5 text-xs">
+              <a href="tel:0761813183" class="p-2.5 rounded-xl bg-white/5 hover:bg-white/10 flex items-center justify-between text-white transition-colors">
+                <span><i class="fa-solid fa-phone text-[#D4AF37] mr-2"></i> 076 181 3183</span>
+                <span class="text-[10px] text-slate-400 uppercase font-semibold">Call Direct</span>
+              </a>
+              <a href="https://wa.me/94761813183" target="_blank" class="p-2.5 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 flex items-center justify-between transition-colors border border-emerald-500/20">
+                <span><i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp Lochana</span>
+                <span class="text-[10px] uppercase font-semibold">Priority Chat</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Anusara Card -->
+          <div class="glass-panel p-6 rounded-3xl border border-[#00E5FF]/30 bg-[#131720]">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-14 h-14 rounded-2xl bg-[#00E5FF]/20 border border-[#00E5FF]/40 flex items-center justify-center text-[#00E5FF] text-2xl font-black">
+                <i class="fa-solid fa-pen-ruler"></i>
+              </div>
+              <div>
+                <span class="text-[10px] uppercase font-bold text-[#00E5FF] tracking-wider">Co-Founder &amp; Creative Lead</span>
+                <h3 class="text-xl font-bold text-white">Anusara</h3>
+                <span class="text-xs text-slate-400">Event Design &amp; Client Relations</span>
+              </div>
+            </div>
+            <div class="space-y-2 pt-2 border-t border-white/5 text-xs">
+              <a href="tel:0724258328" class="p-2.5 rounded-xl bg-white/5 hover:bg-white/10 flex items-center justify-between text-white transition-colors">
+                <span><i class="fa-solid fa-phone text-[#00E5FF] mr-2"></i> 072 425 8328</span>
+                <span class="text-[10px] text-slate-400 uppercase font-semibold">Call Direct</span>
+              </a>
+              <a href="https://wa.me/94724258328" target="_blank" class="p-2.5 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-[#00E5FF] flex items-center justify-between transition-colors border border-cyan-500/20">
+                <span><i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp Anusara</span>
+                <span class="text-[10px] uppercase font-semibold">Priority Chat</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Official Channels -->
+          <div class="p-6 rounded-3xl bg-white/5 border border-white/10 space-y-4 text-xs">
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-envelope text-[#A855F7] text-base mt-0.5"></i>
+              <div>
+                <strong class="text-white block font-medium">Official Inquiries &amp; RFP:</strong>
+                <a href="mailto:onevoiceeventplanners@gmail.com" class="text-[#A855F7] hover:underline font-mono">onevoiceeventplanners@gmail.com</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-location-dot text-red-400 text-base mt-0.5"></i>
+              <div>
+                <strong class="text-white block font-medium">Headquarters:</strong>
+                <span class="text-slate-300">Kegalle, Sabaragamuwa Province, Sri Lanka</span>
+                <span class="text-slate-400 block text-[11px] mt-0.5">Providing full technical crews islandwide (Colombo, Kandy, Galle, Negombo, Kurunegala).</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Inquiry Form with Direct Formatting -->
+        <div class="lg:col-span-7">
+          <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-[#D4AF37]/30 shadow-2xl">
+            <h3 class="font-cinzel text-2xl font-bold text-white mb-2">Send an Official Inquiry</h3>
+            <p class="text-xs text-slate-400 mb-8">Provide your celebration details below. Our system will format it immediately for review.</p>
+
+            <form id="inquiryForm" class="space-y-5">
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Your Full Name *</label>
+                  <input type="text" id="name" required placeholder="e.g. Kasun Fernando" class="w-full px-4 py-3 rounded-xl bg-[#0D0F12] border border-white/10 text-white text-sm focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] outline-none">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Phone / WhatsApp *</label>
+                  <input type="tel" id="phone" required placeholder="e.g. 077 123 4567" class="w-full px-4 py-3 rounded-xl bg-[#0D0F12] border border-white/10 text-white text-sm focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] outline-none">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Email Address</label>
+                  <input type="email" id="email" placeholder="e.g. kasun@example.com" class="w-full px-4 py-3 rounded-xl bg-[#0D0F12] border border-white/10 text-white text-sm focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] outline-none">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Event Category *</label>
+                  <select id="eventType" class="w-full px-4 py-3 rounded-xl bg-[#0D0F12] border border-white/10 text-white text-sm focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] outline-none">
+                    <option value="Corporate Events & Galas">Corporate Events &amp; Galas</option>
+                    <option value="Batch Parties & Campus Events">Batch Parties &amp; Campus Events</option>
+                    <option value="Birthday Celebrations & Private Parties">Birthday Celebrations &amp; Private Parties</option>
+                    <option value="Product Launches & Brand Activations">Product Launches &amp; Brand Activations</option>
+                    <option value="Office Get-Togethers">Office Get-Togethers</option>
+                    <option value="Audio / DJ & Stage FX Production Only">Audio / DJ &amp; Stage FX Only</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Target Event Date</label>
+                  <input type="date" id="eventDate" class="w-full px-4 py-3 rounded-xl bg-[#0D0F12] border border-white/10 text-white text-sm focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] outline-none">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Guest Capacity</label>
+                  <input type="text" id="guestEstimate" placeholder="e.g. 150 Pax" class="w-full px-4 py-3 rounded-xl bg-[#0D0F12] border border-white/10 text-white text-sm focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] outline-none">
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Venue Location &amp; Special Requests</label>
+                <textarea id="message" rows="4" placeholder="Mention venue name (e.g. Kegalle, Kandy, Colombo), music preferences, stage effects, or budget expectations..." class="w-full px-4 py-3 rounded-xl bg-[#0D0F12] border border-white/10 text-white text-sm focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] outline-none"></textarea>
+              </div>
+
+              <div class="pt-2">
+                <button type="submit" class="btn-gold w-full py-4 rounded-xl text-black font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2">
+                  <i class="fa-solid fa-paper-plane"></i>
+                  <span>Submit &amp; Open WhatsApp Chat</span>
+                </button>
+              </div>
+
+              <p class="text-[11px] text-center text-slate-400">
+                Routed to <span class="text-[#D4AF37]">onevoiceeventplanners@gmail.com</span> and founders' direct queue.
+              </p>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SUBMISSION SUCCESS MODAL -->
+  <div id="submissionModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-md items-center justify-center p-4">
+    <div class="glass-panel p-8 rounded-3xl max-w-md w-full border border-[#D4AF37] text-center space-y-5">
+      <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 flex items-center justify-center mx-auto text-2xl">
+        <i class="fa-solid fa-check-double"></i>
+      </div>
+      <h3 class="text-2xl font-cinzel font-bold text-white">Inquiry Form Prepared!</h3>
+      <p class="text-xs text-slate-300 leading-relaxed">
+        Your event details have been organized. Click below to launch the formatted message directly to Anusara on WhatsApp.
+      </p>
+      <div class="space-y-3 pt-2">
+        <a id="modalWhatsAppBtn" href="https://wa.me/94724258328" target="_blank" class="w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all">
+          <i class="fa-brands fa-whatsapp text-lg"></i> Launch WhatsApp Chat with Anusara
+        </a>
+        <button id="closeModalBtn" type="button" class="w-full py-3 rounded-xl bg-white/5 border border-white/10 text-slate-300 text-xs font-semibold hover:text-white">
+          Close Window
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING WHATSAPP -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <a href="https://wa.me/94724258328?text=Hi%20Anusara%2C%20I%20am%20on%20your%20Contact%20page." target="_blank" class="w-14 h-14 rounded-full bg-gradient-to-tr from-emerald-600 to-emerald-400 text-white flex items-center justify-center text-2xl shadow-[0_0_25px_rgba(16,185,129,0.5)] hover:scale-110 transition-all" title="WhatsApp Anusara">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#080A0D] border-t border-white/10 pt-16 pb-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <img src="assets/images/logo.svg" alt="One Voice Logo" class="h-10 w-auto object-contain rounded-lg border border-white/10 p-0.5 bg-black">
+          <div>
+            <span class="font-cinzel text-base font-bold text-white">ONE VOICE</span>
+            <span class="block text-[10px] text-slate-400">Event Planners &bull; Kegalle</span>
+          </div>
+        </div>
+        <p>&copy; 2026 One Voice Event Planners. Founders Lochana (076 181 3183) &amp; Anusara (072 425 8328).</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Event Customizer & Package Estimator | One Voice Event Planners</title>
+  <meta name="description"
+    content="Calculate and customize your event package in real-time. Select event type, guest count (30-500), venue type, and get instant Silver, Gold, and Platinum pricing in Sri Lankan Rupees.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Luxury Dark Theme CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#0D0F12',
+            brandCard: '#13171F',
+            gold: {
+              DEFAULT: '#D4AF37',
+              light: '#F5DE88',
+              dark: '#9E7C1B'
+            },
+            cyanElectric: '#00E5FF',
+            purpleNeon: '#A855F7'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-[#0D0F12] text-slate-100 selection:bg-[#D4AF37]/30 selection:text-[#F5DE88]">
+
+  <!-- Top Announcement Bar -->
+  <div
+    class="bg-gradient-to-r from-[#191d26] via-[#1f2636] to-[#191d26] border-b border-[#D4AF37]/20 py-2 px-4 text-xs">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-3">
+        <span
+          class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] border border-[#D4AF37]/30 font-medium">
+          <i class="fa-solid fa-map-pin text-[10px]"></i> Kegalle & Islandwide
+        </span>
+        <span class="text-slate-300 hidden sm:inline italic">"Unifying Moments, Celebrating Life"</span>
+      </div>
+      <div class="flex items-center gap-5 text-slate-300">
+        <a href="tel:0761813183" class="hover:text-[#D4AF37] transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-phone text-[#D4AF37]"></i> <span class="hidden md:inline">Lochana:</span> 076 181 3183
+        </a>
+        <a href="tel:0724258328" class="hover:text-[#00E5FF] transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-phone text-[#00E5FF]"></i> <span class="hidden md:inline">Anusara:</span> 072 425 8328
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header id="mainNavbar"
+    class="sticky top-0 z-50 transition-all duration-300 bg-[#0D0F12]/85 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group py-1">
+          <img src="assets/images/logo.svg" alt="One Voice Logo"
+            class="h-11 sm:h-13 w-auto object-contain rounded-lg border border-white/10 p-0.5 bg-black/80 shadow-[0_0_15px_rgba(212,175,55,0.2)] group-hover:border-[#D4AF37]/60 transition-all">
+          <div>
+            <span class="font-cinzel text-xl sm:text-2xl font-black tracking-wider text-white flex items-center gap-1">
+              ONE <span class="text-gold-gradient">VOICE</span>
+            </span>
+            <span class="block text-[10px] uppercase tracking-[0.25em] text-slate-400 font-medium">Event Planners &bull;
+              Kegalle</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="index.html" class="text-slate-300 hover:text-white transition-colors">Home</a>
+          <a href="about.html" class="text-slate-300 hover:text-white transition-colors">About Us</a>
+          <a href="services.html" class="text-slate-300 hover:text-white transition-colors">Services</a>
+          <a href="estimator.html"
+            class="text-[#00E5FF] border-b-2 border-[#00E5FF] pb-1 transition-colors flex items-center gap-1.5 font-bold">
+            <i class="fa-solid fa-calculator text-xs text-[#00E5FF]"></i> Package Estimator
+          </a>
+          <a href="gallery.html" class="text-slate-300 hover:text-white transition-colors">Gallery</a>
+          <a href="contact.html" class="text-slate-300 hover:text-white transition-colors">Contact</a>
+        </nav>
+
+        <!-- Header CTA -->
+        <div class="hidden lg:flex items-center gap-3">
+          <a href="https://wa.me/94724258328" target="_blank" rel="noopener noreferrer"
+            class="btn-gold px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-bold inline-flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp text-sm"></i>
+            <span>WhatsApp Anusara</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" type="button"
+          class="md:hidden p-2.5 rounded-xl bg-white/5 border border-white/10 text-slate-200 hover:text-[#D4AF37]">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu"
+      class="hidden md:hidden fixed inset-0 z-50 bg-[#0D0F12]/95 backdrop-blur-xl border-b border-white/10 p-6 flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-white/10">
+          <div class="flex items-center gap-3">
+            <img src="assets/images/logo.svg" alt="One Voice Logo"
+              class="h-10 w-auto object-contain rounded-lg border border-white/10 p-0.5 bg-black">
+            <div>
+              <span class="font-cinzel text-base font-bold text-white">ONE VOICE</span>
+              <span class="block text-[10px] text-slate-400">Event Planners &bull; Kegalle</span>
+            </div>
+          </div>
+          <button id="closeMobileMenu" class="p-2 text-slate-400 hover:text-white text-xl">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <nav class="flex flex-col gap-4 mt-8 text-lg font-medium">
+          <a href="index.html" class="text-slate-200 hover:text-white py-2 border-b border-white/5">Home</a>
+          <a href="about.html" class="text-slate-200 hover:text-white py-2 border-b border-white/5">About Us</a>
+          <a href="services.html" class="text-slate-200 hover:text-white py-2 border-b border-white/5">Services &
+            Packages</a>
+          <a href="estimator.html" class="text-[#00E5FF] py-2 border-b border-white/5">Package Estimator</a>
+          <a href="gallery.html" class="text-slate-200 hover:text-white py-2 border-b border-white/5">Portfolio
+            Gallery</a>
+          <a href="contact.html" class="text-slate-200 hover:text-white py-2">Contact & Inquiries</a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-white/10 space-y-3">
+        <a href="https://wa.me/94724258328" target="_blank"
+          class="w-full py-3 rounded-xl bg-emerald-600 text-white font-semibold text-center flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-lg"></i> Chat on WhatsApp (Anusara: 072 425 8328)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ESTIMATOR MAIN SECTION -->
+  <main id="estimatorSection" class="py-12 sm:py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Top Title -->
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <span
+          class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#00E5FF]/10 text-[#00E5FF] border border-[#00E5FF]/30 text-xs font-semibold uppercase tracking-widest mb-3">
+          <i class="fa-solid fa-sliders"></i> Real-Time Interactive Tool
+        </span>
+        <h1 class="font-cinzel text-3xl sm:text-5xl font-extrabold text-white mb-4">
+          Event Customizer &amp; <span class="text-gold-gradient">Package Estimator</span>
+        </h1>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          Configure your event requirements across 4 steps below. Our dynamic engine will calibrate equipment, staffing,
+          and catering budgets into customized <span class="text-[#D4AF37] font-semibold">Silver</span>, <span
+            class="text-[#00E5FF] font-semibold">Gold</span>, and <span
+            class="text-[#A855F7] font-semibold">Platinum</span> packages.
+        </p>
+      </div>
+
+      <!-- Live Interactive Wizard / Configuration Board -->
+      <div class="glass-panel p-6 sm:p-10 rounded-3xl border border-[#D4AF37]/30 shadow-2xl mb-14">
+
+        <!-- Step Navigation Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-3 pb-8 mb-8 border-b border-white/10">
+          <div class="flex flex-wrap items-center gap-2 text-xs font-bold uppercase tracking-wider">
+            <span
+              class="step-indicator-pill px-3.5 py-1.5 rounded-full border border-[#D4AF37] text-[#D4AF37] bg-[#D4AF37]/10 flex items-center gap-2">
+              <span>1</span> Event Type
+            </span>
+            <span
+              class="step-indicator-pill px-3.5 py-1.5 rounded-full border border-white/10 text-slate-400 flex items-center gap-2">
+              <span>2</span> Guest Count (30-500)
+            </span>
+            <span
+              class="step-indicator-pill px-3.5 py-1.5 rounded-full border border-white/10 text-slate-400 flex items-center gap-2">
+              <span>3</span> Venue Type
+            </span>
+            <span
+              class="step-indicator-pill px-3.5 py-1.5 rounded-full border border-white/10 text-slate-400 flex items-center gap-2">
+              <span>4</span> Packages
+            </span>
+          </div>
+
+          <div id="summaryBadge" class="text-xs text-slate-300 bg-white/5 px-4 py-2 rounded-xl border border-white/10">
+            <i class="fa-solid fa-sparkles text-[#D4AF37] mr-1"></i> Configured: <span
+              class="text-white font-semibold">Corporate Events</span> &bull; <span
+              class="text-[#00E5FF] font-semibold">100 Guests</span> &bull; <span
+              class="text-[#A855F7] font-semibold">Indoor Hall</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+
+          <!-- LEFT CONTROLS: Steps 1, 2, 3 -->
+          <div class="lg:col-span-6 space-y-10">
+
+            <!-- STEP 1: Select Event Type -->
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2.5 text-[#D4AF37] font-bold text-sm uppercase tracking-wider">
+                  <span
+                    class="w-6 h-6 rounded-full bg-[#D4AF37] text-black text-xs flex items-center justify-center font-black">1</span>
+                  <span>Step 1: Select Event Type</span>
+                </div>
+                <!-- Optional Dropdown Alternative -->
+                <select id="eventTypeSelect"
+                  class="bg-[#1A202C] text-xs text-slate-200 border border-white/10 rounded-lg px-2.5 py-1 focus:outline-none focus:border-[#D4AF37]">
+                  <option value="corporate">Corporate Events</option>
+                  <option value="batch_party">Batch Parties &amp; Campus</option>
+                  <option value="birthday_party">Birthday &amp; Private</option>
+                  <option value="product_launch">Product Launches</option>
+                  <option value="office_gettogether">Office Get-Togethers</option>
+                </select>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+
+                <div
+                  class="event-type-card cursor-pointer p-4 rounded-2xl border border-[#D4AF37] bg-[#1e2533] shadow-[0_0_20px_rgba(212,175,55,0.25)] transition-all flex items-start gap-3.5"
+                  data-value="corporate">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-[#D4AF37]/20 border border-[#D4AF37]/40 flex items-center justify-center text-[#D4AF37] shrink-0">
+                    <i class="fa-solid fa-briefcase text-base"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-white text-sm">Corporate Events</h3>
+                    <p class="text-[11px] text-slate-400 mt-0.5">Conferences, Galas, Banquets</p>
+                  </div>
+                </div>
+
+                <div
+                  class="event-type-card cursor-pointer p-4 rounded-2xl border border-white/10 bg-[#13171f] hover:border-[#D4AF37]/50 transition-all flex items-start gap-3.5"
+                  data-value="batch_party">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-[#00E5FF]/20 border border-[#00E5FF]/40 flex items-center justify-center text-[#00E5FF] shrink-0">
+                    <i class="fa-solid fa-graduation-cap text-base"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-white text-sm">Batch &amp; Campus</h3>
+                    <p class="text-[11px] text-slate-400 mt-0.5">Reunions, DJ Club Bashes</p>
+                  </div>
+                </div>
+
+                <div
+                  class="event-type-card cursor-pointer p-4 rounded-2xl border border-white/10 bg-[#13171f] hover:border-[#D4AF37]/50 transition-all flex items-start gap-3.5"
+                  data-value="birthday_party">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-[#A855F7]/20 border border-[#A855F7]/40 flex items-center justify-center text-[#A855F7] shrink-0">
+                    <i class="fa-solid fa-cake-candles text-base"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-white text-sm">Birthday Celebrations</h3>
+                    <p class="text-[11px] text-slate-400 mt-0.5">21st, 50th &amp; Private VIP</p>
+                  </div>
+                </div>
+
+                <div
+                  class="event-type-card cursor-pointer p-4 rounded-2xl border border-white/10 bg-[#13171f] hover:border-[#D4AF37]/50 transition-all flex items-start gap-3.5"
+                  data-value="product_launch">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-pink-500/20 border border-pink-500/40 flex items-center justify-center text-pink-400 shrink-0">
+                    <i class="fa-solid fa-rocket text-base"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-white text-sm">Product Launches</h3>
+                    <p class="text-[11px] text-slate-400 mt-0.5">Brand unveils, Expos, Press</p>
+                  </div>
+                </div>
+
+                <div
+                  class="event-type-card cursor-pointer p-4 rounded-2xl border border-white/10 bg-[#13171f] hover:border-[#D4AF37]/50 transition-all flex items-start gap-3.5 sm:col-span-2"
+                  data-value="office_gettogether">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 shrink-0">
+                    <i class="fa-solid fa-people-group text-base"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-white text-sm">Office Get-Togethers</h3>
+                    <p class="text-[11px] text-slate-400 mt-0.5">Team bonding dinners, festive holidays &amp; cocktail
+                      parties</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- STEP 2: Select Guest Count (30 to 500) -->
+            <div class="space-y-4">
+              <div class="flex items-center gap-2.5 text-[#00E5FF] font-bold text-sm uppercase tracking-wider">
+                <span
+                  class="w-6 h-6 rounded-full bg-[#00E5FF] text-black text-xs flex items-center justify-center font-black">2</span>
+                <span>Step 2: Select Guest Count (30 up to 500)</span>
+              </div>
+
+              <div class="p-6 rounded-2xl bg-[#0F131C] border border-white/10 space-y-6">
+
+                <div class="flex items-center justify-between">
+                  <div>
+                    <span class="text-xs text-slate-400 block">Total Expected Attendees:</span>
+                    <span class="text-xl font-extrabold text-white"><span id="guestCountDisplay">100</span>
+                      Guests</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <input type="number" id="guestInput" min="30" max="500" value="100"
+                      class="w-24 px-3 py-2 rounded-xl bg-[#19202E] border border-[#00E5FF]/40 text-[#00E5FF] text-right font-extrabold text-xl focus:outline-none focus:ring-2 focus:ring-[#00E5FF]">
+                    <span class="text-xs text-slate-400 font-semibold uppercase">Pax</span>
+                  </div>
+                </div>
+
+                <!-- Range Slider -->
+                <div>
+                  <input type="range" id="guestSlider" min="30" max="500" step="5" value="100" class="w-full">
+                  <div class="flex justify-between text-[11px] text-slate-400 font-mono mt-2">
+                    <span>30 Min</span>
+                    <span>100</span>
+                    <span>250</span>
+                    <span>400</span>
+                    <span>500 Max</span>
+                  </div>
+                </div>
+
+                <!-- Presets -->
+                <div class="flex flex-wrap gap-2 pt-2 border-t border-white/5">
+                  <span class="text-xs text-slate-400 self-center mr-1">Presets:</span>
+                  <button type="button"
+                    class="guest-preset-btn px-3 py-1.5 rounded-lg border border-white/10 bg-[#171D28] text-xs font-semibold hover:border-[#D4AF37] transition-all"
+                    data-count="50">50 Pax</button>
+                  <button type="button"
+                    class="guest-preset-btn px-3 py-1.5 rounded-lg border border-[#D4AF37] bg-[#D4AF37] text-black text-xs font-semibold hover:border-[#D4AF37] transition-all"
+                    data-count="100">100 Pax</button>
+                  <button type="button"
+                    class="guest-preset-btn px-3 py-1.5 rounded-lg border border-white/10 bg-[#171D28] text-xs font-semibold hover:border-[#D4AF37] transition-all"
+                    data-count="200">200 Pax</button>
+                  <button type="button"
+                    class="guest-preset-btn px-3 py-1.5 rounded-lg border border-white/10 bg-[#171D28] text-xs font-semibold hover:border-[#D4AF37] transition-all"
+                    data-count="350">350 Pax</button>
+                  <button type="button"
+                    class="guest-preset-btn px-3 py-1.5 rounded-lg border border-white/10 bg-[#171D28] text-xs font-semibold hover:border-[#D4AF37] transition-all"
+                    data-count="500">500 Pax</button>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- STEP 3: Venue Type Selection -->
+            <div class="space-y-4">
+              <div class="flex items-center gap-2.5 text-[#A855F7] font-bold text-sm uppercase tracking-wider">
+                <span
+                  class="w-6 h-6 rounded-full bg-[#A855F7] text-black text-xs flex items-center justify-center font-black">3</span>
+                <span>Step 3: Select Venue Type</span>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+
+                <div
+                  class="venue-type-card cursor-pointer p-4 rounded-2xl border border-[#00E5FF] bg-[#1e2533] shadow-[0_0_20px_rgba(0,229,255,0.2)] transition-all text-center space-y-2"
+                  data-value="indoor">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-[#00E5FF]/20 border border-[#00E5FF]/40 flex items-center justify-center text-[#00E5FF] mx-auto">
+                    <i class="fa-solid fa-hotel text-lg"></i>
+                  </div>
+                  <h4 class="font-bold text-white text-xs">Indoor Hall</h4>
+                  <p class="text-[10px] text-slate-400">Ballrooms &amp; A/C banquet spaces</p>
+                </div>
+
+                <div
+                  class="venue-type-card cursor-pointer p-4 rounded-2xl border border-white/10 bg-[#13171f] hover:border-[#00E5FF]/50 transition-all text-center space-y-2"
+                  data-value="outdoor">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 mx-auto">
+                    <i class="fa-solid fa-tree text-lg"></i>
+                  </div>
+                  <h4 class="font-bold text-white text-xs">Outdoor / Garden</h4>
+                  <p class="text-[10px] text-slate-400">Estate lawns, beaches &amp; gardens</p>
+                </div>
+
+                <div
+                  class="venue-type-card cursor-pointer p-4 rounded-2xl border border-white/10 bg-[#13171f] hover:border-[#00E5FF]/50 transition-all text-center space-y-2"
+                  data-value="rooftop">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-[#A855F7]/20 border border-[#A855F7]/40 flex items-center justify-center text-[#A855F7] mx-auto">
+                    <i class="fa-solid fa-city text-lg"></i>
+                  </div>
+                  <h4 class="font-bold text-white text-xs">Rooftop Deck</h4>
+                  <p class="text-[10px] text-slate-400">Skyline views &amp; sunset lounge vibe</p>
+                </div>
+
+              </div>
+
+              <!-- Popular Add-on Toggles -->
+              <div class="pt-2">
+                <span class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Optional
+                  High-Impact Add-ons:</span>
+                <div class="space-y-2">
+                  <label
+                    class="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/5 hover:border-white/20 cursor-pointer text-xs">
+                    <input type="checkbox"
+                      class="addon-checkbox rounded text-[#D4AF37] focus:ring-[#D4AF37] bg-[#1a202c]"
+                      data-name="P3 Ultra HD LED Video Wall (12x8 ft)" data-price="45000">
+                    <span class="flex-1 text-slate-300">P3 Ultra HD LED Screen Backdrop (12x8 ft)</span>
+                    <span class="text-[#D4AF37] font-semibold">+45,000 LKR</span>
+                  </label>
+                  <label
+                    class="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/5 hover:border-white/20 cursor-pointer text-xs">
+                    <input type="checkbox"
+                      class="addon-checkbox rounded text-[#D4AF37] focus:ring-[#D4AF37] bg-[#1a202c]"
+                      data-name="360 Spinning Glam Video Booth" data-price="35000">
+                    <span class="flex-1 text-slate-300">360-Degree Glam Spinning Video Booth</span>
+                    <span class="text-[#00E5FF] font-semibold">+35,000 LKR</span>
+                  </label>
+                  <label
+                    class="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/5 hover:border-white/20 cursor-pointer text-xs">
+                    <input type="checkbox"
+                      class="addon-checkbox rounded text-[#D4AF37] focus:ring-[#D4AF37] bg-[#1a202c]"
+                      data-name="4K Drone Aerial Shoot" data-price="25000">
+                    <span class="flex-1 text-slate-300">4K Drone Aerial Cinematography</span>
+                    <span class="text-[#A855F7] font-semibold">+25,000 LKR</span>
+                  </label>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- RIGHT PREVIEW: Step 4 Dynamic Package Generator -->
+          <div class="lg:col-span-6 space-y-6">
+            <div class="flex items-center justify-between pb-3 border-b border-white/10">
+              <div class="flex items-center gap-2.5 text-white font-bold text-sm uppercase tracking-wider">
+                <span
+                  class="w-6 h-6 rounded-full bg-emerald-500 text-black text-xs flex items-center justify-center font-black">4</span>
+                <span>Step 4: Dynamic Package Generator</span>
+              </div>
+              <span class="text-[11px] font-mono text-emerald-400">Live LKR Quote</span>
+            </div>
+
+            <!-- TABBED / ACCORDION OR CARDS VIEW FOR PACKAGES -->
+            <div class="space-y-6">
+
+              <!-- GOLD PRESTIGE (HIGHLIGHTED FIRST ON MOBILE) -->
+              <div
+                class="glass-panel p-6 sm:p-7 rounded-3xl border-2 border-[#D4AF37] bg-gradient-to-b from-[#1c2230] via-[#141822] to-[#10131B] shadow-[0_0_35px_rgba(212,175,55,0.25)] relative">
+                <div class="flex justify-between items-start mb-3">
+                  <div>
+                    <span class="text-[11px] uppercase tracking-widest text-[#D4AF37] font-bold">Most Popular
+                      Tier</span>
+                    <h3 class="text-2xl font-black text-white">Gold Prestige Package</h3>
+                  </div>
+                  <span
+                    class="text-xs uppercase font-bold tracking-wider px-3 py-1 rounded-full bg-[#D4AF37] text-black">
+                    ★ Best Value ★
+                  </span>
+                </div>
+
+                <div class="my-4 pb-4 border-b border-[#D4AF37]/30 flex items-baseline justify-between">
+                  <span class="text-xs text-[#F5DE88]">Dynamic Estimated Total:</span>
+                  <div id="goldPrice" class="text-3xl sm:text-4xl font-extrabold font-cinzel text-gold-gradient">LKR
+                    365,000</div>
+                </div>
+
+                <!-- Features Checklist -->
+                <div class="space-y-3 text-xs">
+                  <div class="flex items-start gap-2.5">
+                    <i class="fa-solid fa-volume-high text-[#D4AF37] mt-0.5"></i>
+                    <div><strong class="text-white">Sound / DJ:</strong> <span id="goldSound"
+                        class="text-slate-300">High-Power JBL/RCF Active System + Resident Club DJ</span></div>
+                  </div>
+                  <div class="flex items-start gap-2.5">
+                    <i class="fa-solid fa-lightbulb text-[#00E5FF] mt-0.5"></i>
+                    <div><strong class="text-white">Stage Lighting:</strong> <span id="goldLighting"
+                        class="text-slate-300">Full Trussing, Moving Head Beams &amp; DMX Lighting</span></div>
+                  </div>
+                  <div class="flex items-start gap-2.5">
+                    <i class="fa-solid fa-video text-[#A855F7] mt-0.5"></i>
+                    <div><strong class="text-white">Media:</strong> <span id="goldMedia" class="text-slate-300">2
+                        Photographers + 4K Cinematic Highlight Recap Video</span></div>
+                  </div>
+                  <div class="flex items-start gap-2.5">
+                    <i class="fa-solid fa-sparkles text-[#D4AF37] mt-0.5"></i>
+                    <div><strong class="text-white">Stage FX:</strong> <span id="goldStageFX" class="text-slate-300">2x
+                        Cold Pyro Fountain Sparklers + Low Cloud Fog</span></div>
+                  </div>
+                  <div class="flex items-start gap-2.5">
+                    <i class="fa-solid fa-utensils text-emerald-400 mt-0.5"></i>
+                    <div><strong class="text-white">Catering:</strong> <span id="goldCatering"
+                        class="text-slate-300">Full Buffet Dining Coordination &amp; Dessert Corner Setup</span></div>
+                  </div>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-[#D4AF37]/30">
+                  <a id="goldWhatsAppBtn" href="https://wa.me/94724258328" target="_blank"
+                    class="btn-gold w-full py-3.5 rounded-xl text-black font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Book Gold Package via WhatsApp
+                  </a>
+                </div>
+              </div>
+
+              <!-- SILVER ESSENCE -->
+              <div class="glass-panel p-6 rounded-3xl border border-slate-700/70 bg-[#121620]">
+                <div class="flex justify-between items-start mb-2">
+                  <div>
+                    <span class="text-[11px] uppercase tracking-widest text-slate-400 font-bold">Standard Tier</span>
+                    <h3 class="text-xl font-bold text-white">Silver Essence Package</h3>
+                  </div>
+                  <div id="silverPrice" class="text-2xl font-extrabold font-cinzel text-slate-200">LKR 195,000</div>
+                </div>
+
+                <div class="space-y-2 text-xs text-slate-400 mt-3">
+                  <div>&bull; <strong class="text-white">Sound/DJ:</strong> <span id="silverSound">Standard PA System (2
+                      Tops + 1 Sub) + Pro DJ</span></div>
+                  <div>&bull; <strong class="text-white">Stage Lighting:</strong> <span id="silverLighting">Ambient LED
+                      Par Cans &amp; Static Wash</span></div>
+                  <div>&bull; <strong class="text-white">Photography:</strong> <span id="silverMedia">1 Pro Photographer
+                      (Full edited digital gallery)</span></div>
+                  <div>&bull; <strong class="text-white">Catering:</strong> <span id="silverCatering">Standard
+                      Refreshments / Buffet Coordination</span></div>
+                  <div>&bull; <strong class="text-white">Stage FX:</strong> <span id="silverStageFX">Basic Entrance Fog
+                      &amp; Warm Spotlight</span></div>
+                </div>
+
+                <div class="mt-4 pt-3 border-t border-white/5">
+                  <a id="silverWhatsAppBtn" href="https://wa.me/94724258328" target="_blank"
+                    class="w-full py-2.5 rounded-xl border border-white/10 hover:border-[#D4AF37] bg-white/5 text-slate-200 text-xs font-semibold flex items-center justify-center gap-2 transition-all">
+                    <i class="fa-brands fa-whatsapp text-emerald-400"></i> Book Silver via WhatsApp
+                  </a>
+                </div>
+              </div>
+
+              <!-- PLATINUM ROYAL VIP -->
+              <div
+                class="glass-panel p-6 rounded-3xl border border-[#00E5FF]/40 bg-gradient-to-b from-[#131b26] to-[#0d121a]">
+                <div class="flex justify-between items-start mb-2">
+                  <div>
+                    <span class="text-[11px] uppercase tracking-widest text-[#00E5FF] font-bold">Signature VIP
+                      Tier</span>
+                    <h3 class="text-xl font-bold text-white">Platinum Royal VIP</h3>
+                  </div>
+                  <div id="platinumPrice" class="text-2xl font-extrabold font-cinzel text-cyan-neon">LKR 620,000</div>
+                </div>
+
+                <div class="space-y-2 text-xs text-slate-300 mt-3">
+                  <div>&bull; <strong class="text-white">Sound/DJ:</strong> <span id="platinumSound">Arena Line-Array
+                      System + Celebrity DJ / Live Band</span></div>
+                  <div>&bull; <strong class="text-white">Lighting:</strong> <span id="platinumLighting">Concert
+                      Intelligent Beams, Laser Show &amp; Strobe FX</span></div>
+                  <div>&bull; <strong class="text-white">Media:</strong> <span id="platinumMedia">3-Camera 4K Crew +
+                      Aerial Drone + Same Day Edit</span></div>
+                  <div>&bull; <strong class="text-white">Catering:</strong> <span id="platinumCatering">5-Star Banquet,
+                      Welcome Mocktail Bar &amp; Live Stations</span></div>
+                  <div>&bull; <strong class="text-white">Stage FX:</strong> <span id="platinumStageFX">4x Cold Pyros,
+                      CO2 Cryo Jets, Confetti &amp; Cloud Fog</span></div>
+                </div>
+
+                <div class="mt-4 pt-3 border-t border-white/10">
+                  <a id="platinumWhatsAppBtn" href="https://wa.me/94724258328" target="_blank"
+                    class="btn-cyan w-full py-3 rounded-xl text-black font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Book Platinum VIP via WhatsApp
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- FAQ Accordion for Packages -->
+      <div class="max-w-4xl mx-auto pt-10">
+        <h3 class="font-cinzel text-2xl font-bold text-white text-center mb-8">Frequently Asked Questions on Pricing
+        </h3>
+        <div class="space-y-4">
+          <div class="p-5 rounded-2xl bg-white/5 border border-white/10">
+            <h4 class="font-semibold text-white text-sm mb-1">Are travel and generator fuel costs included in these
+              estimates?</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              For events within Kegalle district, transport is fully included. For outstation venues (Colombo, Kandy,
+              Nuwara Eliya, Galle), minimal standard transport overhead is added based on truck logistics.
+            </p>
+          </div>
+          <div class="p-5 rounded-2xl bg-white/5 border border-white/10">
+            <h4 class="font-semibold text-white text-sm mb-1">Can we swap items between packages?</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Yes, absolutely! You can choose a Gold sound system with a Silver catering tier or add extra Cold Pyro
+              fountains. Click any WhatsApp button to tell Lochana and Anusara your custom preferences.
+            </p>
+          </div>
+          <div class="p-5 rounded-2xl bg-white/5 border border-white/10">
+            <h4 class="font-semibold text-white text-sm mb-1">How do we lock our date on the calendar?</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              We require a standard 25% advance confirmation deposit to reserve all audio-visual gear, technicians, and
+              date availability. The remaining balance is payable on event day.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FLOATING WHATSAPP -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <a href="https://wa.me/94724258328?text=Hi%20Anusara%2C%20I%20just%20calculated%20a%20package%20quote%20on%20your%20website!"
+      target="_blank"
+      class="w-14 h-14 rounded-full bg-gradient-to-tr from-emerald-600 to-emerald-400 text-white flex items-center justify-center text-2xl shadow-[0_0_25px_rgba(16,185,129,0.5)] hover:scale-110 transition-all"
+      title="WhatsApp Anusara">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#080A0D] border-t border-white/10 pt-16 pb-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <img src="assets/images/logo.svg" alt="One Voice Logo"
+            class="h-10 w-auto object-contain rounded-lg border border-white/10 p-0.5 bg-black">
+          <div>
+            <span class="font-cinzel text-base font-bold text-white">ONE VOICE</span>
+            <span class="block text-[10px] text-slate-400">Event Planners &bull; Kegalle</span>
+          </div>
+        </div>
+        <p>&copy; 2026 One Voice Event Planners. Founders Lochana (076 181 3183) &amp; Anusara (072 425 8328).</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/estimator.js"></script>
+</body>
+
+</html>

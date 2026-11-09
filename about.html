@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us & Founders | One Voice Event Planners | Kegalle, Sri Lanka</title>
+  <meta name="description" content="Meet the founders Lochana and Anusara behind One Voice Event Planners in Kegalle, Sri Lanka. Learn about our passion, vision, and islandwide event production excellence.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Luxury Dark Theme CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#0D0F12',
+            brandCard: '#13171F',
+            gold: {
+              DEFAULT: '#D4AF37',
+              light: '#F5DE88',
+              dark: '#9E7C1B'
+            },
+            cyanElectric: '#00E5FF',
+            purpleNeon: '#A855F7'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0D0F12] text-slate-100 selection:bg-[#D4AF37]/30 selection:text-[#F5DE88]">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-[#191d26] via-[#1f2636] to-[#191d26] border-b border-[#D4AF37]/20 py-2 px-4 text-xs">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] border border-[#D4AF37]/30 font-medium">
+          <i class="fa-solid fa-map-pin text-[10px]"></i> Kegalle & Islandwide
+        </span>
+        <span class="text-slate-300 hidden sm:inline italic">"Unifying Moments, Celebrating Life"</span>
+      </div>
+      <div class="flex items-center gap-5 text-slate-300">
+        <a href="tel:0761813183" class="hover:text-[#D4AF37] transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-phone text-[#D4AF37]"></i> <span class="hidden md:inline">Lochana:</span> 076 181 3183
+        </a>
+        <a href="tel:0724258328" class="hover:text-[#00E5FF] transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-phone text-[#00E5FF]"></i> <span class="hidden md:inline">Anusara:</span> 072 425 8328
+        </a>
+        <a href="mailto:onevoiceeventplanners@gmail.com" class="hover:text-[#A855F7] transition-colors hidden lg:flex items-center gap-1.5">
+          <i class="fa-solid fa-envelope text-[#A855F7]"></i> onevoiceeventplanners@gmail.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header id="mainNavbar" class="sticky top-0 z-50 transition-all duration-300 bg-[#0D0F12]/85 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group py-1">
+          <img src="assets/images/logo.svg" alt="One Voice Logo" class="h-11 sm:h-13 w-auto object-contain rounded-lg border border-white/10 p-0.5 bg-black/80 shadow-[0_0_15px_rgba(212,175,55,0.2)] group-hover:border-[#D4AF37]/60 transition-all">
+          <div>
+            <span class="font-cinzel text-xl sm:text-2xl font-black tracking-wider text-white flex items-center gap-1">
+              ONE <span class="text-gold-gradient">VOICE</span>
+            </span>
+            <span class="block text-[10px] uppercase tracking-[0.25em] text-slate-400 font-medium">Event Planners &bull; Kegalle</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="index.html" class="text-slate-300 hover:text-white transition-colors">Home</a>
+          <a href="about.html" class="text-[#D4AF37] border-b-2 border-[#D4AF37] pb-1 transition-colors">About Us</a>
+          <a href="services.html" class="text-slate-300 hover:text-white transition-colors">Services</a>
+          <a href="estimator.html" class="text-slate-300 hover:text-[#00E5FF] transition-colors flex items-center gap-1.5">
+            <i class="fa-solid fa-calculator text-xs text-[#00E5FF]"></i> Package Estimator
+          </a>
+          <a href="gallery.html" class="text-slate-300 hover:text-white transition-colors">Gallery</a>
+          <a href="contact.html" class="text-slate-300 hover:text-white transition-colors">Contact</a>
+        </nav>
+
+        <!-- Header CTA -->
+        <div class="hidden lg:flex items-center gap-3">
+          <a href="estimator.html" class="btn-gold px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-bold inline-flex items-center gap-2">
+            <span>Package Estimator</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+          <a href="https://wa.me/94724258328" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500 hover:text-black transition-all" title="WhatsApp Anusara">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" type="button" class="md:hidden p-2.5 rounded-xl bg-white/5 border border-white/10 text-slate-200 hover:text-[#D4AF37]">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden md:hidden fixed inset-0 z-50 bg-[#0D0F12]/95 backdrop-blur-xl border-b border-white/10 p-6 flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-white/10">
+          <div class="flex items-center gap-3">
+            <img src="assets/images/logo.svg" alt="One Voice Logo" class="h-10 w-auto object-contain rounded-lg border border-white/10 p-0.5 bg-black">
+            <div>
+              <span class="font-cinzel text-base font-bold text-white">ONE VOICE</span>
+              <span class="block text-[10px] text-slate-400">Event Planners &bull; Kegalle</span>
+            </div>
+          </div>
+          <button id="closeMobileMenu" class="p-2 text-slate-400 hover:text-white text-xl">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <nav class="flex flex-col gap-4 mt-8 text-lg font-medium">
+          <a href="index.html" class="text-slate-200 hover:text-white py-2 border-b border-white/5">Home</a>
+          <a href="about.html" class="text-[#D4AF37] py-2 border-b border-white/5">About Us</a>
+          <a href="services.html" class="text-slate-200 hover:text-white py-2 border-b border-white/5">Services & Packages</a>
+          <a href="estimator.html" class="text-[#00E5FF] py-2 border-b border-white/5 flex items-center justify-between">
+            <span>Package Estimator</span>
+            <span class="text-xs px-2 py-0.5 rounded bg-[#00E5FF]/20 text-[#00E5FF]">Interactive</span>
+          </a>
+          <a href="gallery.html" class="text-slate-200 hover:text-white py-2 border-b border-white/5">Portfolio Gallery</a>
+          <a href="contact.html" class="text-slate-200 hover:text-white py-2">Contact & Inquiries</a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-white/10 space-y-3">
+        <a href="https://wa.me/94724258328" target="_blank" class="w-full py-3 rounded-xl bg-emerald-600 text-white font-semibold text-center flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-lg"></i> Chat on WhatsApp (Anusara: 072 425 8328)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="py-20 relative bg-gradient-to-b from-[#151A24] via-[#0D0F12] to-[#0D0F12] border-b border-white/5">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] border border-[#D4AF37]/30 text-xs font-semibold uppercase tracking-widest mb-4">
+        Our Roots &bull; Kegalle, Sri Lanka
+      </span>
+      <h1 class="font-cinzel text-4xl sm:text-6xl font-extrabold text-white mb-6">
+        Architects of <span class="text-gold-gradient">Celebration</span>
+      </h1>
+      <p class="font-playfair text-xl sm:text-2xl italic text-slate-300 mb-6">
+        "Unifying Moments, Celebrating Life"
+      </p>
+      <p class="max-w-2xl mx-auto text-sm sm:text-base text-slate-300 leading-relaxed font-light">
+        Founded in Kegalle, One Voice Event Planners was built on a bold premise: every celebration deserves concert-grade acoustic fidelity, theatrical stage magic, and flawless hospitality coordination without inflated costs.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOUNDERS IN-DEPTH PROFILE SECTION -->
+  <section class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#00E5FF]/10 text-[#00E5FF] border border-[#00E5FF]/30 text-xs font-semibold uppercase tracking-widest mb-3">
+          The Leadership
+        </span>
+        <h2 class="font-cinzel text-3xl sm:text-5xl font-extrabold text-white mb-4">
+          Meet Lochana &amp; <span class="text-gold-gradient">Anusara</span>
+        </h2>
+        <p class="text-slate-400 text-sm">
+          Hands-on creators who personally inspect, direct, and execute each stage setup, audio cue, and client itinerary.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        
+        <!-- Founder 1: Lochana -->
+        <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-[#D4AF37]/40 bg-gradient-to-b from-[#161C27] to-[#10141D] shadow-[0_0_35px_rgba(212,175,55,0.12)]">
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-6">
+            <div class="w-36 h-36 rounded-2xl overflow-hidden shrink-0 border-2 border-[#D4AF37] shadow-xl">
+              <img src="assets/images/lochana.jpg" 
+                   alt="Lochana - Managing Director" 
+                   data-team="lochana"
+                   class="w-full h-full object-cover object-top"
+                   onerror="this.src='https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=400&q=80'">
+            </div>
+            <div>
+              <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-bold">Main Organizer</span>
+              <h3 class="font-cinzel text-2xl font-extrabold text-white mt-1">Lochana</h3>
+              <p class="text-sm text-[#D4AF37] font-semibold mt-1">Managing Director &amp; Head of Operations</p>
+              <p class="text-xs text-[#D4AF37]/60 font-medium">Financial Director</p>
+              <p class="text-xs text-slate-300 mt-1">Specialization: Operations, Stage Production &amp; Financial Direction</p>
+              
+              <div class="mt-4 flex flex-wrap gap-2 text-[11px]">
+                <span class="px-2.5 py-1 rounded-md bg-[#D4AF37]/15 text-[#D4AF37] border border-[#D4AF37]/30">Live Sound Master</span>
+                <span class="px-2.5 py-1 rounded-md bg-white/5 text-slate-300 border border-white/10">Stage Rigging Safety</span>
+                <span class="px-2.5 py-1 rounded-md bg-white/5 text-slate-300 border border-white/10">Cold Pyros Certified</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-4 text-xs text-slate-300 leading-relaxed border-t border-white/10 pt-6">
+            <p>
+              With an obsessive ear for acoustic precision, Lochana oversees all technical audio-visual deployments. Whether tuning line-array systems in echoing indoor banquet halls or managing wireless microphone spectrums for high-profile keynote addresses, he guarantees pure clarity with zero feedback.
+            </p>
+            <p>
+              Under his direction, One Voice uses international-standard cabling, heavy-duty aluminum box trussing, and safe electronic Cold Pyro spark machines that are indoor-safe and odorless.
+            </p>
+          </div>
+
+          <!-- Direct Actions -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-8 pt-6 border-t border-white/10">
+            <a href="tel:0761813183" class="p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold text-xs flex items-center justify-center gap-2 transition-all">
+              <i class="fa-solid fa-phone text-[#D4AF37]"></i> Call 076 181 3183
+            </a>
+            <a href="https://wa.me/94761813183?text=Hi%20Lochana%2C%20I%20would%20like%20to%20discuss%20event%20production." target="_blank" class="p-3 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/40 text-emerald-400 font-semibold text-xs flex items-center justify-center gap-2 transition-all">
+              <i class="fa-brands fa-whatsapp text-emerald-400"></i> WhatsApp Lochana
+            </a>
+          </div>
+        </div>
+
+        <!-- Founder 2: Anusara -->
+        <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-[#00E5FF]/40 bg-gradient-to-b from-[#141B26] to-[#0E131C] shadow-[0_0_35px_rgba(0,229,255,0.12)]">
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-6">
+            <div class="w-36 h-36 rounded-2xl overflow-hidden shrink-0 border-2 border-[#00E5FF] shadow-xl">
+              <img src="assets/images/anusara.jpg" 
+                   alt="Anusara - Creative Director" 
+                   data-team="anusara"
+                   class="w-full h-full object-cover object-top"
+                   onerror="this.src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80'">
+            </div>
+            <div>
+              <span class="text-xs uppercase tracking-widest text-[#00E5FF] font-bold">Main Organizer</span>
+              <h3 class="font-cinzel text-2xl font-extrabold text-white mt-1">Anusara</h3>
+              <p class="text-sm text-[#00E5FF] font-semibold mt-1">Creative Director &amp; Chief Marketing Officer (CMO)</p>
+              <p class="text-xs text-[#00E5FF]/60 font-medium">Technical Director</p>
+              <p class="text-xs text-slate-300 mt-1">Specialization: Creative Direction, Marketing, Theme Design &amp; Technical Production</p>
+              
+              <div class="mt-4 flex flex-wrap gap-2 text-[11px]">
+                <span class="px-2.5 py-1 rounded-md bg-[#00E5FF]/15 text-[#00E5FF] border border-[#00E5FF]/30">Visual Concept Lead</span>
+                <span class="px-2.5 py-1 rounded-md bg-white/5 text-slate-300 border border-white/10">Run-of-Show Architect</span>
+                <span class="px-2.5 py-1 rounded-md bg-white/5 text-slate-300 border border-white/10">VIP Hospitality</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-4 text-xs text-slate-300 leading-relaxed border-t border-white/10 pt-6">
+            <p>
+              Anusara is the creative pulse of One Voice. From moody neon aesthetic color palettes to bespoke entrance structures, stage backdrops, and seamless timeline choreography, he ensures every event feels like a cinematic celebration.
+            </p>
+            <p>
+              He serves as the primary liaison for event committees, executive boards, and families, translating vague ideas into structured, executed realities with zero stress for the host.
+            </p>
+          </div>
+
+          <!-- Direct Actions -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-8 pt-6 border-t border-white/10">
+            <a href="tel:0724258328" class="p-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold text-xs flex items-center justify-center gap-2 transition-all">
+              <i class="fa-solid fa-phone text-[#00E5FF]"></i> Call 072 425 8328
+            </a>
+            <a href="https://wa.me/94724258328?text=Hi%20Anusara%2C%20I%20would%20like%20to%20discuss%20our%20event%20design." target="_blank" class="p-3 rounded-xl bg-cyan-500/15 hover:bg-cyan-500/25 border border-cyan-500/40 text-[#00E5FF] font-semibold text-xs flex items-center justify-center gap-2 transition-all">
+              <i class="fa-brands fa-whatsapp text-[#00E5FF]"></i> WhatsApp Anusara
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VISION, MISSION & VALUES -->
+  <section class="py-20 bg-gradient-to-b from-[#0D0F12] via-[#121620] to-[#0D0F12] border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="glass-panel p-8 rounded-3xl border border-[#D4AF37]/30">
+          <div class="w-12 h-12 rounded-xl bg-[#D4AF37]/20 border border-[#D4AF37]/40 flex items-center justify-center text-[#D4AF37] text-xl mb-6">
+            <i class="fa-solid fa-eye"></i>
+          </div>
+          <h3 class="font-cinzel text-xl font-bold text-white mb-3">Our Vision</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            To be recognized as Sri Lanka’s most technically reliable and artistically transformative event production house, setting new benchmarks for live stage aesthetics and flawless hospitality.
+          </p>
+        </div>
+
+        <div class="glass-panel p-8 rounded-3xl border border-[#00E5FF]/30">
+          <div class="w-12 h-12 rounded-xl bg-[#00E5FF]/20 border border-[#00E5FF]/40 flex items-center justify-center text-[#00E5FF] text-xl mb-6">
+            <i class="fa-solid fa-bullseye"></i>
+          </div>
+          <h3 class="font-cinzel text-xl font-bold text-white mb-3">Our Mission</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            "Unifying Moments, Celebrating Life" by fusing state-of-the-art concert sound, intelligent lighting, certified stage FX, and attentive guest service into harmonious, stress-free events.
+          </p>
+        </div>
+
+        <div class="glass-panel p-8 rounded-3xl border border-[#A855F7]/30">
+          <div class="w-12 h-12 rounded-xl bg-[#A855F7]/20 border border-[#A855F7]/40 flex items-center justify-center text-[#A855F7] text-xl mb-6">
+            <i class="fa-solid fa-handshake-angle"></i>
+          </div>
+          <h3 class="font-cinzel text-xl font-bold text-white mb-3">Core Values</h3>
+          <ul class="text-xs text-slate-300 space-y-2">
+            <li>&bull; <strong class="text-white">Absolute Transparency:</strong> Zero hidden surprise costs in LKR.</li>
+            <li>&bull; <strong class="text-white">Punctuality:</strong> Rigging &amp; sound checks complete hours before arrival.</li>
+            <li>&bull; <strong class="text-white">Safety:</strong> Odorless cold spark technology and licensed electrical runs.</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="font-cinzel text-3xl sm:text-5xl font-extrabold text-white mb-6">
+        Let's Bring Your Next Event to Life
+      </h2>
+      <p class="text-slate-300 text-sm max-w-xl mx-auto mb-8">
+        Have questions on venue power, hall acoustics, or staging? Lochana and Anusara are just one tap away.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="estimator.html" class="btn-gold px-8 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider">
+          Estimate Your Event Budget
+        </a>
+        <a href="https://wa.me/94724258328" target="_blank" class="px-8 py-3.5 rounded-xl bg-emerald-500/20 border border-emerald-500/50 text-emerald-400 font-bold text-xs uppercase tracking-wider flex items-center gap-2">
+          <i class="fa-brands fa-whatsapp text-base"></i> WhatsApp Anusara (072 425 8328)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOATING WHATSAPP -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <a href="https://wa.me/94724258328?text=Hi%20Anusara%2C%20I%20am%20viewing%20the%20One%20Voice%20About%20page." target="_blank" class="w-14 h-14 rounded-full bg-gradient-to-tr from-emerald-600 to-emerald-400 text-white flex items-center justify-center text-2xl shadow-[0_0_25px_rgba(16,185,129,0.5)] hover:scale-110 transition-all" title="WhatsApp Anusara">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#080A0D] border-t border-white/10 pt-16 pb-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <img src="assets/images/logo.svg" alt="One Voice Logo" class="h-10 w-auto object-contain rounded-lg border border-white/10 p-0.5 bg-black">
+          <div>
+            <span class="font-cinzel text-base font-bold text-white">ONE VOICE</span>
+            <span class="block text-[10px] text-slate-400">Event Planners &bull; Kegalle</span>
+          </div>
+        </div>
+        <p>&copy; 2026 One Voice Event Planners. Founders Lochana (076 181 3183) &amp; Anusara (072 425 8328).</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+

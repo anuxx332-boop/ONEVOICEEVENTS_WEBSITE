@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Services & Technical Production | One Voice Event Planners | Kegalle, Sri Lanka</title>
+  <meta name="description" content="Explore luxury event services by One Voice Event Planners: Corporate Events, Batch Parties, Birthdays, Product Launches, Sound/DJ Systems, Stage Lighting, and Stage FX.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Luxury Dark Theme CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#0D0F12',
+            brandCard: '#13171F',
+            gold: {
+              DEFAULT: '#D4AF37',
+              light: '#F5DE88',
+              dark: '#9E7C1B'
+            },
+            cyanElectric: '#00E5FF',
+            purpleNeon: '#A855F7'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0D0F12] text-slate-100 selection:bg-[#D4AF37]/30 selection:text-[#F5DE88]">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-[#191d26] via-[#1f2636] to-[#191d26] border-b border-[#D4AF37]/20 py-2 px-4 text-xs">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] border border-[#D4AF37]/30 font-medium">
+          <i class="fa-solid fa-map-pin text-[10px]"></i> Kegalle & Islandwide
+        </span>
+        <span class="text-slate-300 hidden sm:inline italic">"Unifying Moments, Celebrating Life"</span>
+      </div>
+      <div class="flex items-center gap-5 text-slate-300">
+        <a href="tel:0761813183" class="hover:text-[#D4AF37] transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-phone text-[#D4AF37]"></i> <span class="hidden md:inline">Lochana:</span> 076 181 3183
+        </a>
+        <a href="tel:0724258328" class="hover:text-[#00E5FF] transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-phone text-[#00E5FF]"></i> <span class="hidden md:inline">Anusara:</span> 072 425 8328
+        </a>
+        <a href="mailto:onevoiceeventplanners@gmail.com" class="hover:text-[#A855F7] transition-colors hidden lg:flex items-center gap-1.5">
+          <i class="fa-solid fa-envelope text-[#A855F7]"></i> onevoiceeventplanners@gmail.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header id="mainNavbar" class="sticky top-0 z-50 transition-all duration-300 bg-[#0D0F12]/85 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group py-1">
+          <img src="assets/images/logo.svg" alt="One Voice Logo" class="h-11 sm:h-13 w-auto object-contain rounded-lg border border-white/10 p-0.5 bg-black/80 shadow-[0_0_15px_rgba(212,175,55,0.2)] group-hover:border-[#D4AF37]/60 transition-all">
+          <div>
+            <span class="font-cinzel text-xl sm:text-2xl font-black tracking-wider text-white flex items-center gap-1">
+              ONE <span class="text-gold-gradient">VOICE</span>
+            </span>
+            <span class="block text-[10px] uppercase tracking-[0.25em] text-slate-400 font-medium">Event Planners &bull; Kegalle</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="index.html" class="text-slate-300 hover:text-white transition-colors">Home</a>
+          <a href="about.html" class="text-slate-300 hover:text-white transition-colors">About Us</a>
+          <a href="services.html" class="text-[#D4AF37] border-b-2 border-[#D4AF37] pb-1 transition-colors">Services</a>
+          <a href="estimator.html" class="text-slate-300 hover:text-[#00E5FF] transition-colors flex items-center gap-1.5">
+            <i class="fa-solid fa-calculator text-xs text-[#00E5FF]"></i> Package Estimator
+          </a>
+          <a href="gallery.html" class="text-slate-300 hover:text-white transition-colors">Gallery</a>
+          <a href="contact.html" class="text-slate-300 hover:text-white transition-colors">Contact</a>
+        </nav>
+
+        <!-- Header CTA -->
+        <div class="hidden lg:flex items-center gap-3">
+          <a href="estimator.html" class="btn-gold px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-bold inline-flex items-center gap-2">
+            <span>Instant Estimator</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+          <a href="https://wa.me/94724258328" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500 hover:text-black transition-all" title="WhatsApp Anusara">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" type="button" class="md:hidden p-2.5 rounded-xl bg-white/5 border border-white/10 text-slate-200 hover:text-[#D4AF37]">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden md:hidden fixed inset-0 z-50 bg-[#0D0F12]/95 backdrop-blur-xl border-b border-white/10 p-6 flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-white/10">
+          <div class="flex items-center gap-3">
+            <img src="assets/images/logo.svg" alt="One Voice Logo" class="h-10 w-auto object-contain rounded-lg border border-white/10 p-0.5 bg-black">
+            <div>
+              <span class="font-cinzel text-base font-bold text-white">ONE VOICE</span>
+              <span class="block text-[10px] text-slate-400">Event Planners &bull; Kegalle</span>
+            </div>
+          </div>
+          <button id="closeMobileMenu" class="p-2 text-slate-400 hover:text-white text-xl">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <nav class="flex flex-col gap-4 mt-8 text-lg font-medium">
+          <a href="index.html" class="text-slate-200 hover:text-white py-2 border-b border-white/5">Home</a>
+          <a href="about.html" class="text-slate-200 hover:text-white py-2 border-b border-white/5">About Us</a>
+          <a href="services.html" class="text-[#D4AF37] py-2 border-b border-white/5">Services & Packages</a>
+          <a href="estimator.html" class="text-[#00E5FF] py-2 border-b border-white/5">Package Estimator</a>
+          <a href="gallery.html" class="text-slate-200 hover:text-white py-2 border-b border-white/5">Portfolio Gallery</a>
+          <a href="contact.html" class="text-slate-200 hover:text-white py-2">Contact & Inquiries</a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-white/10 space-y-3">
+        <a href="https://wa.me/94724258328" target="_blank" class="w-full py-3 rounded-xl bg-emerald-600 text-white font-semibold text-center flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-lg"></i> Chat on WhatsApp (Anusara: 072 425 8328)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="py-20 relative bg-gradient-to-b from-[#131722] via-[#0D0F12] to-[#0D0F12] border-b border-white/5">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] border border-[#D4AF37]/30 text-xs font-semibold uppercase tracking-widest mb-4">
+        Turnkey Event Solutions
+      </span>
+      <h1 class="font-cinzel text-4xl sm:text-6xl font-extrabold text-white mb-6">
+        Excellence in Every <span class="text-gold-gradient">Dimension</span>
+      </h1>
+      <p class="max-w-2xl mx-auto text-sm sm:text-base text-slate-300 leading-relaxed font-light">
+        We merge cutting-edge audio engineering, architectural stage design, synchronized pyrotechnics, and meticulous timeline coordination to deliver flawless celebrations.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICES BREAKDOWN LIST -->
+  <section class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+      
+      <!-- 1. Corporate Events -->
+      <div id="corporate" class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6 relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+          <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=80" 
+               alt="Corporate Event Production" 
+               class="w-full h-[400px] object-cover filter brightness-90">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0D0F12] via-transparent to-transparent"></div>
+          <span class="absolute bottom-6 left-6 px-3.5 py-1.5 rounded-full bg-black/70 backdrop-blur-md text-[#D4AF37] border border-[#D4AF37]/30 text-xs font-bold">
+            Executive Galas &bull; Annual General Meetings
+          </span>
+        </div>
+        <div class="lg:col-span-6 space-y-5">
+          <div class="flex items-center gap-2 text-xs font-bold text-[#D4AF37] uppercase tracking-wider">
+            <i class="fa-solid fa-briefcase"></i> Service 01
+          </div>
+          <h2 class="font-cinzel text-3xl font-bold text-white">Corporate Events &amp; Galas</h2>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Elevate your enterprise prestige. We provide full-spectrum event management for corporate award nights, stakeholder conferences, dealer get-togethers, and annual gala banquets.
+          </p>
+          <div class="grid grid-cols-2 gap-3 text-xs text-slate-300 pt-2">
+            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Seamless Mic &amp; Speech Clarity</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Presentation LED Backdrops</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Stage Podiums &amp; Lighting Wash</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Executive Protocol Staff</div>
+          </div>
+          <div class="pt-4 flex flex-wrap gap-4">
+            <a href="estimator.html" class="btn-gold px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider">
+              Estimate Corporate Cost
+            </a>
+            <a href="https://wa.me/94724258328?text=Hi%20Anusara%2C%20we%20need%20a%20proposal%20for%20our%20Corporate%20Event." target="_blank" class="btn-outline-gold px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2">
+              <i class="fa-brands fa-whatsapp text-emerald-400"></i> WhatsApp Anusara
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Batch Parties & Campus Bashes -->
+      <div id="batch" class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6 lg:order-2 relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+          <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1000&q=80" 
+               alt="Batch Party Club Night" 
+               class="w-full h-[400px] object-cover filter brightness-90">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0D0F12] via-transparent to-transparent"></div>
+          <span class="absolute bottom-6 left-6 px-3.5 py-1.5 rounded-full bg-black/70 backdrop-blur-md text-[#00E5FF] border border-[#00E5FF]/30 text-xs font-bold">
+            High Bass &bull; Intelligent Lasers &bull; DJ Sets
+          </span>
+        </div>
+        <div class="lg:col-span-6 lg:order-1 space-y-5">
+          <div class="flex items-center gap-2 text-xs font-bold text-[#00E5FF] uppercase tracking-wider">
+            <i class="fa-solid fa-graduation-cap"></i> Service 02
+          </div>
+          <h2 class="font-cinzel text-3xl font-bold text-white">Batch Parties &amp; Campus Events</h2>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Reunite with your batch mates in unforgettable style. From school alumni reunions to university dances, freshers welcomes, and graduation after-parties, we turn any venue into an electric festival.
+          </p>
+          <div class="grid grid-cols-2 gap-3 text-xs text-slate-300 pt-2">
+            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-[#00E5FF]"></i> Top Sri Lankan Resident DJs</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-[#00E5FF]"></i> Ground-Shaking Subwoofer Arrays</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-[#00E5FF]"></i> Heavy Low-Fog Cloud Dancefloor</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-[#00E5FF]"></i> Synchronized Strobe &amp; Lasers</div>
+          </div>
+          <div class="pt-4 flex flex-wrap gap-4">
+            <a href="estimator.html" class="btn-cyan px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider text-black">
+              Calculate Batch Package
+            </a>
+            <a href="https://wa.me/94724258328?text=Hi%20Anusara%2C%20we%20are%20organizing%20a%20Batch%20Party%20in%20Kegalle." target="_blank" class="px-6 py-3 rounded-xl bg-white/5 border border-white/10 text-slate-200 hover:text-white text-xs font-bold uppercase tracking-wider flex items-center gap-2">
+              <i class="fa-brands fa-whatsapp text-emerald-400"></i> Inquire with Anusara
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Birthday Celebrations & Private Parties -->
+      <div id="birthday" class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6 relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+          <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=1000&q=80" 
+               alt="Birthday Celebration" 
+               class="w-full h-[400px] object-cover filter brightness-90">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0D0F12] via-transparent to-transparent"></div>
+          <span class="absolute bottom-6 left-6 px-3.5 py-1.5 rounded-full bg-black/70 backdrop-blur-md text-[#A855F7] border border-[#A855F7]/30 text-xs font-bold">
+            Milestone 21st, 30th &bull; Themed Decor
+          </span>
+        </div>
+        <div class="lg:col-span-6 space-y-5">
+          <div class="flex items-center gap-2 text-xs font-bold text-[#A855F7] uppercase tracking-wider">
+            <i class="fa-solid fa-cake-candles"></i> Service 03
+          </div>
+          <h2 class="font-cinzel text-3xl font-bold text-white">Birthday Celebrations &amp; Private Parties</h2>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Mark your golden milestone with unmatched elegance. From 21st birthday extravaganzas to sweet sixteens and intimate anniversary parties, we take care of personalized decor, DJ tunes, and grand cake-cutting moments.
+          </p>
+          <div class="grid grid-cols-2 gap-3 text-xs text-slate-300 pt-2">
+            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-purpleNeon"></i> Cold Pyro Cake Cutting Fountains</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-purpleNeon"></i> Neon Photo Booth &amp; 360 Rig</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-purpleNeon"></i> Custom Lighted Entrance Arches</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-purpleNeon"></i> Ambient Table &amp; Fairy Lights</div>
+          </div>
+          <div class="pt-4 flex flex-wrap gap-4">
+            <a href="estimator.html" class="btn-gold px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider">
+              Customize Birthday Package
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Product Launches & Brand Activations -->
+      <div id="launch" class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6 lg:order-2 relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+          <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1000&q=80" 
+               alt="Product Launch Activation" 
+               class="w-full h-[400px] object-cover filter brightness-90">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0D0F12] via-transparent to-transparent"></div>
+          <span class="absolute bottom-6 left-6 px-3.5 py-1.5 rounded-full bg-black/70 backdrop-blur-md text-pink-400 border border-pink-400/30 text-xs font-bold">
+            Theatrical Unveilings &bull; Press &amp; Media Ready
+          </span>
+        </div>
+        <div class="lg:col-span-6 lg:order-1 space-y-5">
+          <div class="flex items-center gap-2 text-xs font-bold text-pink-400 uppercase tracking-wider">
+            <i class="fa-solid fa-rocket"></i> Service 04
+          </div>
+          <h2 class="font-cinzel text-3xl font-bold text-white">Product Launches &amp; Brand Activations</h2>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Create dramatic suspense and maximize media coverage. Our synchronized countdown timers, CO2 jet blasts, drop curtains, and high-lumen LED screens ensure your new product enters the Sri Lankan market with maximum impact.
+          </p>
+          <div class="grid grid-cols-2 gap-3 text-xs text-slate-300 pt-2">
+            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-400"></i> CO2 Cryo Jet Blast Unveilings</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-400"></i> High-Resolution LED Screen Stage</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-400"></i> Cinematic Reveal Video Production</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-400"></i> Media Wall &amp; Red Carpet Entrance</div>
+          </div>
+          <div class="pt-4 flex flex-wrap gap-4">
+            <a href="estimator.html" class="btn-gold px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider">
+              Launch Package Generator
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Concert Audio, Truss & Stage FX Tech -->
+      <div id="tech" class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6 relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+          <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=1000&q=80" 
+               alt="Stage Audio and FX Rig" 
+               class="w-full h-[400px] object-cover filter brightness-90">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0D0F12] via-transparent to-transparent"></div>
+          <span class="absolute bottom-6 left-6 px-3.5 py-1.5 rounded-full bg-black/70 backdrop-blur-md text-[#D4AF37] border border-[#D4AF37]/30 text-xs font-bold">
+            Certified Box Truss &bull; DMX Lights &bull; Cold Pyros
+          </span>
+        </div>
+        <div class="lg:col-span-6 space-y-5">
+          <div class="flex items-center gap-2 text-xs font-bold text-[#D4AF37] uppercase tracking-wider">
+            <i class="fa-solid fa-sliders"></i> Service 05
+          </div>
+          <h2 class="font-cinzel text-3xl font-bold text-white">Audio Production, Truss &amp; Safe Stage FX</h2>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Need audio-visual equipment rental or technical execution for your own venue? Lochana and our engineering crew bring concert-grade line arrays, moving head beam fixtures, digital mixers, and indoor-safe cold spark fountains.
+          </p>
+          <div class="grid grid-cols-2 gap-3 text-xs text-slate-300 pt-2">
+            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-[#D4AF37]"></i> Non-Hazardous Cold Spark Fountains</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-[#D4AF37]"></i> Dry Ice Heavy Ground Fog</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-[#D4AF37]"></i> Wireless Digital Microphones</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-[#D4AF37]"></i> Certified Aluminum Truss Goalposts</div>
+          </div>
+          <div class="pt-4 flex flex-wrap gap-4">
+            <a href="tel:0761813183" class="btn-outline-gold px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2">
+              <i class="fa-solid fa-phone"></i> Call Lochana: 076 181 3183
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-gradient-to-b from-[#0D0F12] via-[#121622] to-[#0D0F12] text-center border-t border-white/5">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="font-cinzel text-3xl sm:text-5xl font-extrabold text-white mb-6">
+        Ready to Check Pricing for Your Date?
+      </h2>
+      <p class="text-slate-300 text-sm max-w-xl mx-auto mb-8">
+        Try our interactive package estimator or talk directly to our founders.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="estimator.html" class="btn-gold px-8 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider">
+          Open Dynamic Estimator
+        </a>
+        <a href="contact.html" class="btn-outline-gold px-8 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider">
+          Contact Us Directly
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOATING WHATSAPP -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <a href="https://wa.me/94724258328?text=Hi%20Anusara%2C%20I%20am%20looking%20at%20your%20services%20page." target="_blank" class="w-14 h-14 rounded-full bg-gradient-to-tr from-emerald-600 to-emerald-400 text-white flex items-center justify-center text-2xl shadow-[0_0_25px_rgba(16,185,129,0.5)] hover:scale-110 transition-all" title="WhatsApp Anusara">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#080A0D] border-t border-white/10 pt-16 pb-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <img src="assets/images/logo.svg" alt="One Voice Logo" class="h-10 w-auto object-contain rounded-lg border border-white/10 p-0.5 bg-black">
+          <div>
+            <span class="font-cinzel text-base font-bold text-white">ONE VOICE</span>
+            <span class="block text-[10px] text-slate-400">Event Planners &bull; Kegalle</span>
+          </div>
+        </div>
+        <p>&copy; 2026 One Voice Event Planners. Founders Lochana (076 181 3183) &amp; Anusara (072 425 8328).</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
